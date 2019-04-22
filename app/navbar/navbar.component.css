@@ -1,0 +1,27 @@
+nav{
+  padding: .25rem;
+  background-color: #34434B;
+  border-radius: 0;
+  box-shadow: 0 2px 5px 0 rgba(.5, .5, 1, 0.25);
+
+}
+/*#nav-dropdown{
+color: red;
+
+}*/
+.dropdown-menu{
+  border-radius: .75;
+}
+.navbar-right{
+  float:right;
+}
+.navbar-brand:hover{
+  color: #A0D080
+}
+.nav-link:hover{
+  color: #A0D080
+}
+#logo{
+  padding-bottom: 25px;
+  padding-right: 10px;
+}

@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <base href="/">
+        <title>MedaData</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie-edge">
+
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="styles.css">
+
+        <!-- Libraries -->
+        <!-- Polyfills for older browsers -->
+        <script src="node_modules/core-js/client/shim.min.js"></script>
+        <script src="node_modules/zone.js/dist/zone.js"></script>
+        <script src="node_modules/reflect-metadata/Reflect.js"></script>
+        <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/tether/dist/js/tether.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <!-- Systemjs Config -->
+        <script src="systemjs.config.js"></script>
+        <script>
+            System.import('app').catch(function(err){ console.error(err); });
+        </script>
+    </head>
+    <body>
+
+        <my-app>Loading, please wait...</my-app>
+       <!-- Firebase import -->
+  <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyAxEOoP6jPV6N5Wiqa3dNhqF23_Atpxe88",
+        authDomain: "medadata-854d0.firebaseapp.com",
+        databaseURL: "https://medadata-854d0.firebaseio.com",
+  //  storageBucket: "medadata-854d0.appspot.com",
+        messagingSenderId: "225718314818"
+      };
+      firebase.initializeApp(config);
+    </script>  
+    </body>
+</html>

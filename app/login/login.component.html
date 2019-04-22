@@ -1,0 +1,95 @@
+<style>
+  body {
+    background-color: rgba(0,0,0,0);
+
+  }
+
+  h3, label, hr {
+    color: white;
+  }
+  .fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+  }
+
+  .fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (min-aspect-ratio: 16/9) {
+    .fullscreen-bg__video {
+      height: 300%;
+      top: -100%;
+    }
+  }
+
+  @media (max-aspect-ratio: 16/9) {
+    .fullscreen-bg__video {
+      width: 300%;
+      left: -100%;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .fullscreen-bg {
+      background: url('../images/videoframe.jpg') center center / cover no-repeat;
+    }
+
+    .fullscreen-bg__video {
+      display: none;
+    }
+  }
+</style>
+
+ <body>
+ <div class="fullscreen-bg">
+   <video loop muted autoplay poster="images/videoframe.jpg" class="fullscreen-bg__video">
+      <source src="assets/images/bg-video.m4v" type="video/mp4">
+   </video>
+
+ </div>
+
+  <div class = "row" style="">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2" style="">
+      <h3>Sign In </h3>
+    <form  [formGroup]="myForm" (ngSubmit)="onSignin(userEmail)" >
+            <div class="form-group">
+                <label for="email">E-Mail</label>
+                <input
+                 type="email"
+                 id="email"
+                 name="email"
+                 class="form-control"
+                 formControlName="email"
+                 #userEmail>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                 name="password"
+                 type="password"
+                 id="password"
+                 class="form-control"
+                 formControlName="password">
+            </div>
+            <br>
+          <button
+           class="btn btn-success"
+           type="submit"
+          [disabled]="!myForm.valid"
+           >Sign In</button>
+            <br>
+        </form>
+          <label (click)="forgotPassword()">ForgotPassword</label>
+        </div>
+    </div>
+ </body>

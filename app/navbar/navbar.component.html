@@ -1,0 +1,45 @@
+<nav class="navbar  navbar-dark navbar-default bg-inverse">
+  <div class="container-fluid">
+     <div class="navbar-header">
+    <a routerLink="/" class="navbar-brand" id="logo" href="#"><img src="assets/images/MedaDataLogo.png" height="40px"></a>
+
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+     <li class="nav-item ">
+    <a routerLink="customer" class="nav-link">Customers</a>
+  </li>
+   <li class="nav-item">
+    <a routerLink="medicine" class="nav-link">Medicine</a>
+  </li>
+  <li class="nav-item nav navbar-nav navbar-right">
+    <a routerLink="login"
+    *ngIf="!isAuth()"
+    class="nav-link">Login</a>
+  </li>
+
+        <li class="nav-item nav navbar-nav navbar-right ">
+          <a href="#"
+          *ngIf="isAuth()"
+          (click)="onLogout()"
+          class="nav-link"
+          >Logout</a>
+      <!--
+      class="dropdown-toggle nav-link"
+      id="nav-dropdown"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+      (navEmail)="onEmailAdded($event)"
+    -->
+
+        <!--
+            <ul class="dropdown-menu" aria-labelledby="nav-dropdown">
+            <a class="dropdown-item"
+            (click)="onLogout()"
+            style="cursor: pointer;"
+            >Log Out</a>
+          </ul> -->
+       </li>
+      </ul>
+    </div><!-- navbar-header  -->
+  </div><!-- container-fluid -->
+</nav>
